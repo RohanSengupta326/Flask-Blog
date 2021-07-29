@@ -1,0 +1,21 @@
+{
+    "params": {
+        "local_server": "True",
+        "local_uri": "mysql+pymysql://root:@localhost/blog",
+        "prod_uri": "mysql+pymysql://root:@localhost/blog",
+        "fb_url": "{{your-facebook-profile-link}}",
+        "twt_url": "{{your-twitter-profile-link}}",
+        "gh_url": "{{your-github-profile-link}}",
+        "blog_name": "Code Like a Pro",
+        "blog_top": "From Coders for Coders",
+        "gmail_user": "{{your-email}}",
+        "gmail_pwd": "{{your-gmail-pwd}}",
+        "mail_msg": "hey! very nice to have you on our website! Come again!",
+        "about":"hey guys thanks for visiting my page, please contact us here - {{your-email}}",
+        "no_of_posts": 3,
+        "img":"home-bg.jpg",
+        "uname": "{{admin-username}}",
+        "upass":"{{admin-password}}",
+        "file_location":"{{static-folder-path-after-pulling-this-project-on-your-system}}"
+    }
+}

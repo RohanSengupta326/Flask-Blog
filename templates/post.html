@@ -1,0 +1,49 @@
+{% extends 'base.html' %}
+
+{% block body %}
+
+{% set fname = 'assets/img/' + post.img_name %}
+
+<header class="masthead" style="background-image: url('  {{url_for('static', filename=fname)}} ')">
+    <div class="container position-relative px-4 px-lg-5">
+        <div class="row gx-4 gx-lg-5 justify-content-center">
+            <div class="col-md-10 col-lg-8 col-xl-7">
+                <div class="site-heading">
+                    <h1>{{params['blog_name']}}</h1>
+                    <span class="subheading">{{params['blog_top']}}
+                        
+                    </span>
+                </div>
+            </div>
+        </div>
+    </div>
+</header>
+
+<div class="post-preview">
+    <a href="/post/{{post.slug}}">
+        <h2 class="post-title">{{post.title}} {{post.date}}</h2>
+        <h3 class="post-subtitle"></h3>
+    </a>
+    <p class="post-meta">
+
+        <a href="/">{{params['blog_top']}}</a> 
+
+    </p>
+</div>
+<!-- Post Content-->
+<article class="mb-4">
+    <div class="container px-4 px-lg-5">
+        <div class="row gx-4 gx-lg-5 justify-content-center">
+            <div class="col-md-10 col-lg-8 col-xl-7">
+                {{post.content}}
+                </p>
+            </div>
+        </div>
+    </div>
+</article>
+
+<!-- Bootstrap core JS-->
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.1/dist/js/bootstrap.bundle.min.js"></script>
+<!-- Core theme JS-->
+<script src="{{url_for('static', filename='js/scripts.js')}}"></script>
+{% endblock body %}
